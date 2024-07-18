@@ -1,0 +1,122 @@
+nav,
+header,
+#about,
+footer {
+  background-image: linear-gradient(to right, #3cd178, #326a6c);
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#downarrow {
+  position: absolute;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0 auto;
+  bottom: 5px;
+  -webkit-animation: myanimation 2s infinite;
+  animation: myanimation 2s infinite;
+}
+
+@keyframes myanimation {
+  0% {
+    color: gray;
+    width: 1rem;
+    height: 1rem;
+  }
+  50% {
+    color: white;
+    width: 2rem;
+    height: 2rem;
+  }
+  100% {
+    color: gray;
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.projekt-felsorolas {
+  display: flex;
+}
+
+.projekt-elokep {
+  align-self: end;
+}
+
+.projekt-skill {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.images-view img {
+  box-shadow: 0 0 10px black;
+}
+
+.dice-images-container {
+  height: 15rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  margin-top: -2rem;
+}
+
+.dice-image1 {
+  margin-top: -2rem;
+}
+
+.dice-image1,
+.dice-image2 {
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+}
+.dice-image1 {
+  animation-name: dice1-animation;
+}
+.dice-image2 {
+  animation-name: dice2-animation;
+  opacity: 0;
+}
+
+@keyframes dice1-animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes dice2-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Tablet and Mobile */
+@media screen and (max-width: 991px) {
+  #navbarResponsive {
+    background: #00bfa0;
+    margin-top: 2em;
+    border-radius: 1em;
+    letter-spacing: 3px;
+  }
+  .nav-link {
+    margin-left: 2em;
+  }
+  .nav-link:hover {
+    color: white !important;
+  }
+  #mainNav .navbar-nav li.nav-item a.nav-link.active {
+    color: white !important;
+  }
+}
